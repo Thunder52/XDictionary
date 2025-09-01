@@ -17,7 +17,7 @@ function App() {
 
   const handleSubmit=(e)=>{
     e.preventDefault();
-    const found=dictionary.find((item)=>item.word===searchWord);
+    const found=dictionary.find((item)=>item.word.toLowerCase()===searchWord.toLowerCase());
     if(found){
       setMeaning(found.meaning);
     }else{
